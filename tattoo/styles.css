@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1f1f1f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 100px 20px; /* Aumenta el padding para darle espacio al texto */
+    background-image: url('banner.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Capa de color semitransparente para oscurecer la imagen */
+    backdrop-filter: blur(2px); /* Efecto de desenfoque */
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #e6b800;
+    z-index: 2; /* Asegura que el texto esté por encima de la capa oscura */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #ddd;
+    z-index: 2;
+}
+
+nav {
+    background-color: rgba(34, 34, 34, 0.8); /* Color semitransparente para la barra de navegación */
+    backdrop-filter: blur(10px); /* Desenfoque para un efecto de vidrio */
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Separación entre los elementos del menú */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #e6b800;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e6b800;
+    color: #333;
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Galería */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+form input, form textarea {
+    background-color: #333;
+    color: #fff;
+}
+
+form button {
+    background-color: #e6b800;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #e6b800;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/estigma berserk.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio - Proyects</title>
+</head>
+<body data-page="proyects">
+    <header>
+        <a href="index.html" class="logo">Nishi</a>
+        <nav class="animate__animated, animate__fadeInDown">
+            <a href="index.html"> Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="proyects.html">Proyects</a>
+            <a href="#" class="active" >Contact</a>
+        </nav>
+    </header>
+    <main id="contact" class="contact-section animate__animated animate__fadeInUp">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or would like to work with me, feel free to send me a message!</p>
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/ruizlucioc1@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/portfolio/contact.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>        
+    </main>
